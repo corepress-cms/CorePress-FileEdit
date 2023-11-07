@@ -7,7 +7,7 @@
  */
 
 $corepress_theme_file_editor_path = ( wp_is_block_theme() && ! is_multisite() ) ? 'tools.php' : 'themes.php';
- 
+
 
 /**
  * Makes a tree structure for the theme file editor's file list.
@@ -160,7 +160,7 @@ function corepress_file_editor_theme_display_editor() {
     if ( ( is_multisite() && ! is_network_admin() ) || ! current_user_can( 'edit_themes' ) ) {
         wp_die( '<p>' . __( 'Sorry, you are not allowed to edit templates for this site.' ) . '</p>' );
     }
-    
+
     global $file, $allowed_files, $theme, $error, $action, $relative_file, $parent_file, $title, $corepress_theme_file_editor_path;
 
     // Used in the HTML title tag.
@@ -169,7 +169,7 @@ function corepress_file_editor_theme_display_editor() {
 
     wp_reset_vars( array( 'action', 'error', 'file', 'theme' ) );
     $theme = isset( $_GET['theme'] ) ? $_GET['theme'] : '';
-    
+
     if ( $theme ) {
         $stylesheet = $theme;
     } else {
@@ -512,7 +512,7 @@ function corepress_file_editor_theme_display_editor() {
                         <h1><?php _e( 'Heads up!' ); ?></h1>
                         <p>
                             <?php
-                            _e( 'You appear to be making direct edits to your theme in the WordPress dashboard. It is not recommended! Editing your theme directly could break your site and your changes may be lost in future updates.' );
+                            _e( 'You appear to be making direct edits to your theme in the CorePress dashboard. It is not recommended! Editing your theme directly could break your site and your changes may be lost in future updates.' );
                             ?>
                         </p>
                             <?php

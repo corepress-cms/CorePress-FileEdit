@@ -124,7 +124,7 @@ function corepress_file_editor_plugin_add_help_tab() {
                     ( is_network_admin() ? '<p>' . __( 'Any edits to files from this screen will be reflected on all sites in the network.' ) . '</p>' : '' ),
         )
     );
-    
+
     $screen->set_help_sidebar(
         '<p><strong>' . __( 'For more information:' ) . '</strong></p>' .
         '<p>' . __( '<a href="https://wordpress.org/documentation/article/plugins-editor-screen/">Documentation on Editing Plugins</a>' ) . '</p>' .
@@ -139,7 +139,7 @@ function corepress_file_editor_plugin_display_editor() {
     }
 
     global $error, $parent_file, $title, $file, $plugin, $corepress_plugin_file_editor_path;
-        
+
     // Used in the HTML title tag.
     $title       = __( 'Edit Plugins' );
     $parent_file = $corepress_plugin_file_editor_path;
@@ -453,7 +453,7 @@ function corepress_file_editor_plugin_display_editor() {
                 <div class="file-editor-warning-content">
                     <div class="file-editor-warning-message">
                         <h1><?php _e( 'Heads up!' ); ?></h1>
-                        <p><?php _e( 'You appear to be making direct edits to your plugin in the WordPress dashboard. Editing plugins directly is not recommended as it may introduce incompatibilities that break your site and your changes may be lost in future updates.' ); ?></p>
+                        <p><?php _e( 'You appear to be making direct edits to your plugin in the CorePress dashboard. Editing plugins directly is not recommended as it may introduce incompatibilities that break your site and your changes may be lost in future updates.' ); ?></p>
                         <p><?php _e( 'If you absolutely have to make direct edits to this plugin, use a file manager to create a copy with a new name and hang on to the original. That way, you can re-enable a functional version if something goes wrong.' ); ?></p>
                     </div>
                     <p>
