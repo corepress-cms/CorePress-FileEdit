@@ -308,7 +308,7 @@ function corepress_file_editor_theme_display_editor() {
             __( 'File edited successfully.' ),
             array(
                 'id'                 => 'message',
-                'is-dismissible'     => true,
+                'dismissible'        => true,
                 'additional_classes' => array( 'updated' ),
             )
         );

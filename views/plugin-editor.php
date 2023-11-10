@@ -291,8 +291,9 @@ function corepress_file_editor_plugin_display_editor() {
         wp_admin_notice(
             __( 'File edited successfully.' ),
             array(
-                'additional_classes' => array( 'updated', 'is-dismissible' ),
                 'id'                 => 'message',
+                'dismissible'        => true,
+                'additional_classes' => array( 'updated' ),
             )
         );
     elseif ( is_wp_error( $edit_error ) ) :
