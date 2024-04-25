@@ -127,7 +127,7 @@ function corepress_file_editor_plugin_add_help_tab() {
 
     $screen->set_help_sidebar(
         '<p><strong>' . __( 'For more information:' ) . '</strong></p>' .
-        '<p>' . __( '<a href="https://wordpress.org/documentation/article/plugins-editor-screen/">Documentation on Editing Plugins</a>' ) . '</p>' .
+        '<p>' . __( '<a href="https://developer.wordpress.org/advanced-administration/plugins/editor-screen/">Documentation on Editing Plugins</a>' ) . '</p>' .
         '<p>' . __( '<a href="https://developer.wordpress.org/plugins/">Documentation on Writing Plugins</a>' ) . '</p>' .
         '<p>' . __( '<a href="https://wordpress.org/support/forums/">Support forums</a>' ) . '</p>'
     );
