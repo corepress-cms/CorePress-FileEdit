@@ -167,8 +167,10 @@ function corepress_file_editor_theme_display_editor() {
     $title       = __( 'Edit Themes' );
     $parent_file = $corepress_theme_file_editor_path;
 
-    wp_reset_vars( array( 'action', 'error', 'file', 'theme' ) );
-    $theme = isset( $_GET['theme'] ) ? $_GET['theme'] : '';
+    $action = ! empty( $_REQUEST['action'] ) ? sanitize_text_field( $_REQUEST['action'] ) : '';
+	$theme  = ! empty( $_REQUEST['theme'] ) ? sanitize_text_field( $_REQUEST['theme'] ) : '';
+	$file   = ! empty( $_REQUEST['file'] ) ? sanitize_text_field( $_REQUEST['file'] ) : '';
+	$error  = ! empty( $_REQUEST['error'] );
 
     if ( $theme ) {
         $stylesheet = $theme;
